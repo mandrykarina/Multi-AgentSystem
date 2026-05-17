@@ -1,0 +1,97 @@
+{
+  "prompts": {
+    "direct": "Ты решаешь задачу. Дай краткий, точный и проверяемый ответ.",
+    "cot": "Ты решаешь задачу. Опиши решение пошагово, затем отдельно укажи итоговый ответ.",
+    "ps": "Ты решаешь задачу. Сначала составь план решения задачи, затем выполни решение по этому плану. В конце отдельно укажи итоговый ответ."
+  },
+  "agent_schemas": {
+    "agent1": {
+      "task_type": "string",
+      "plan": [
+        "string"
+      ],
+      "alternatives": [
+        {
+          "method": "string",
+          "rejection_reason": "string"
+        }
+      ],
+      "notes": [
+        "string"
+      ]
+    },
+    "agent2": {
+      "solution_steps": [
+        {
+          "step_id": "int",
+          "action": "string",
+          "plan_alignment": "string",
+          "result": "string"
+        }
+      ],
+      "final_answer": "string",
+      "adaptation_points": [
+        "string"
+      ]
+    },
+    "agent3": {
+      "alignment_assessment": {
+        "score": "int_0_10",
+        "explanation": "string"
+      },
+      "step_reflection": [
+        {
+          "step_id": "int",
+          "assessment": "string"
+        }
+      ],
+      "risks": [
+        "string"
+      ],
+      "final_verdict": "string"
+    }
+  },
+  "metrics": {
+    "automatic": [
+      "rouge_l",
+      "total_tokens",
+      "latency_sec"
+    ],
+    "expert": [
+      "content_correctness_0_2",
+      "choice_justification_1_5",
+      "alternative_depth_1_5"
+    ],
+    "reproducibility_definition": "share_of_tasks_where_min_pairwise_rouge_l_across_seeds_ge_0_99",
+    "pmr_valid_json_rate_denominator": "all_pmr_runs_including_failed",
+    "normalized_tokens_baseline": "direct"
+  },
+  "results": {
+    "final_dir": "results",
+    "smoke_dir": "results_smoke",
+    "required_final_files": [
+      "summary.json",
+      "table4_results.csv",
+      "table4_full.csv",
+      "expert_report.json",
+      "stats_report.json",
+      "experiment.log.jsonl"
+    ]
+  },
+  "statistics": {
+    "tests": [
+      "two_sample_t_test",
+      "mann_whitney_u"
+    ],
+    "agreement": [
+      "fleiss_kappa",
+      "pairwise_weighted_kappa_mean"
+    ]
+  },
+  "runtime": {
+    "python": "3.11",
+    "timeout_sec": 60,
+    "license": "MIT",
+    "full_run_command": "python main.py --dataset --all --runs 3 --seeds 42,43,44"
+  }
+}

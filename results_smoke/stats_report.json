@@ -1,0 +1,146 @@
+{
+  "available": true,
+  "tests": [
+    {
+      "metric": "rouge_l",
+      "group_a": "pmr",
+      "group_b": "direct",
+      "t_test": {
+        "statistic": 1.0574967827238768,
+        "p_value": 0.32466839673203035
+      },
+      "mann_whitney_u": {
+        "statistic": 22.5,
+        "p_value": 0.4871327581713819
+      },
+      "mean_a": 0.5476190476190476,
+      "mean_b": 0.41666666666666663
+    },
+    {
+      "metric": "total_tokens",
+      "group_a": "pmr",
+      "group_b": "direct",
+      "t_test": {
+        "statistic": 23.525543616525137,
+        "p_value": 2.5753723099905726e-06
+      },
+      "mann_whitney_u": {
+        "statistic": 36.0,
+        "p_value": 0.004479258891846413
+      },
+      "mean_a": 2916.5,
+      "mean_b": 45.5
+    },
+    {
+      "metric": "latency_sec",
+      "group_a": "pmr",
+      "group_b": "direct",
+      "t_test": {
+        "statistic": 12.796405821550639,
+        "p_value": 5.131866764838931e-05
+      },
+      "mann_whitney_u": {
+        "statistic": 36.0,
+        "p_value": 0.0021645021645021645
+      },
+      "mean_a": 7.09056978332228,
+      "mean_b": 0.23566468332622512
+    },
+    {
+      "metric": "rouge_l",
+      "group_a": "pmr",
+      "group_b": "cot",
+      "t_test": {
+        "statistic": 1.0574967827238768,
+        "p_value": 0.32466839673203035
+      },
+      "mann_whitney_u": {
+        "statistic": 22.5,
+        "p_value": 0.4871327581713819
+      },
+      "mean_a": 0.5476190476190476,
+      "mean_b": 0.41666666666666663
+    },
+    {
+      "metric": "total_tokens",
+      "group_a": "pmr",
+      "group_b": "cot",
+      "t_test": {
+        "statistic": 22.272714955681437,
+        "p_value": 2.175991206025394e-06
+      },
+      "mann_whitney_u": {
+        "statistic": 36.0,
+        "p_value": 0.00492203567532315
+      },
+      "mean_a": 2916.5,
+      "mean_b": 166.83333333333334
+    },
+    {
+      "metric": "latency_sec",
+      "group_a": "pmr",
+      "group_b": "cot",
+      "t_test": {
+        "statistic": 9.828300290150596,
+        "p_value": 5.2925655428274675e-05
+      },
+      "mann_whitney_u": {
+        "statistic": 36.0,
+        "p_value": 0.0021645021645021645
+      },
+      "mean_a": 7.09056978332228,
+      "mean_b": 1.5199525666830596
+    },
+    {
+      "metric": "rouge_l",
+      "group_a": "pmr",
+      "group_b": "ps",
+      "t_test": {
+        "statistic": 0.44428581544711143,
+        "p_value": 0.6678743631853646
+      },
+      "mann_whitney_u": {
+        "statistic": 19.5,
+        "p_value": 0.8585862013366392
+      },
+      "mean_a": 0.5476190476190476,
+      "mean_b": 0.503968253968254
+    },
+    {
+      "metric": "total_tokens",
+      "group_a": "pmr",
+      "group_b": "ps",
+      "t_test": {
+        "statistic": 21.80923287903566,
+        "p_value": 1.475450058659542e-06
+      },
+      "mann_whitney_u": {
+        "statistic": 36.0,
+        "p_value": 0.004771821713797115
+      },
+      "mean_a": 2916.5,
+      "mean_b": 188.5
+    },
+    {
+      "metric": "latency_sec",
+      "group_a": "pmr",
+      "group_b": "ps",
+      "t_test": {
+        "statistic": 8.951661157366244,
+        "p_value": 2.3278146912783408e-05
+      },
+      "mann_whitney_u": {
+        "statistic": 36.0,
+        "p_value": 0.0021645021645021645
+      },
+      "mean_a": 7.09056978332228,
+      "mean_b": 1.6214449999970384
+    }
+  ],
+  "reproducibility_by_mode": {
+    "direct": 1.0,
+    "cot": 1.0,
+    "ps": 0.5,
+    "pmr": 1.0
+  }
+}

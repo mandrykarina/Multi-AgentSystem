@@ -1,0 +1,10 @@
+{
+  "available": false,
+  "reason": "insufficient sample size for statistical tests",
+  "reproducibility_by_mode": {
+    "direct": 1.0,
+    "cot": 1.0,
+    "ps": 1.0,
+    "pmr": 1.0
+  }
+}

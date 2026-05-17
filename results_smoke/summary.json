@@ -1,0 +1,103 @@
+{
+  "dataset_path": "pmr_dataset_100_with_answers.json",
+  "selected_tasks": 2,
+  "runs": 3,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "failed": 0,
+  "is_final_article_run": false,
+  "output_dir": "results_smoke",
+  "attempts_by_mode": {
+    "direct": 6,
+    "cot": 6,
+    "ps": 6,
+    "pmr": 6
+  },
+  "by_mode": {
+    "direct": {
+      "count": 6,
+      "rouge_l": {
+        "mean": 0.41666666666666663,
+        "std": 0.27386127875258304
+      },
+      "total_tokens": {
+        "mean": 45.5,
+        "std": 3.8340579025361627
+      },
+      "latency_sec": {
+        "mean": 0.23566468332622512,
+        "std": 0.03652203453899048
+      },
+      "reproducibility": 1.0,
+      "valid_json_rate": null,
+      "total_tokens_normalized_to_direct": 1.0
+    },
+    "cot": {
+      "count": 6,
+      "rouge_l": {
+        "mean": 0.41666666666666663,
+        "std": 0.27386127875258304
+      },
+      "total_tokens": {
+        "mean": 166.83333333333334,
+        "std": 45.845028810839096
+      },
+      "latency_sec": {
+        "mean": 1.5199525666830596,
+        "std": 0.45506213475083046
+      },
+      "reproducibility": 1.0,
+      "valid_json_rate": null,
+      "total_tokens_normalized_to_direct": 3.666666666666667
+    },
+    "ps": {
+      "count": 6,
+      "rouge_l": {
+        "mean": 0.503968253968254,
+        "std": 0.20226420535515327
+      },
+      "total_tokens": {
+        "mean": 188.5,
+        "std": 67.32532955730703
+      },
+      "latency_sec": {
+        "mean": 1.6214449999970384,
+        "std": 0.7205548896496092
+      },
+      "reproducibility": 0.5,
+      "valid_json_rate": null,
+      "total_tokens_normalized_to_direct": 4.142857142857143
+    },
+    "pmr": {
+      "count": 6,
+      "rouge_l": {
+        "mean": 0.5476190476190476,
+        "std": 0.13041013273932525
+      },
+      "total_tokens": {
+        "mean": 2916.5,
+        "std": 298.9051689081338
+      },
+      "latency_sec": {
+        "mean": 7.09056978332228,
+        "std": 1.3116585023210725
+      },
+      "reproducibility": 1.0,
+      "valid_json_rate": 1.0,
+      "total_tokens_normalized_to_direct": 64.0989010989011
+    }
+  },
+  "expert_report_available": true,
+  "stats_report_available": true,
+  "final_run_validation": {
+    "dataset_path_ok": true,
+    "selected_tasks_ok": false,
+    "runs_ok": true,
+    "seeds_ok": true,
+    "failed_zero": true,
+    "all_ok": false
+  }
+}
